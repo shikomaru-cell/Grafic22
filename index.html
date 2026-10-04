@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>График 2/2</title>
 <link rel="manifest" href="/Grafic22/manifest.json">
+  <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/Grafic22/sw.js')
+      .then((reg) => console.log('Service Worker зарегистрирован:', reg))
+      .catch((err) => console.error('Ошибка Service Worker:', err));
+  });
+}
+</script>
 <meta name="theme-color" content="#1a1a2e">
 <link rel="icon" href="https://via.placeholder.com/192x192/2ecc71/ffffff?text=2/2">
 <style>
