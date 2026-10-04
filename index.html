@@ -75,8 +75,16 @@ if ('serviceWorker' in navigator) {
   .days .off  { background: #ff5252; }
   .days .empty { background: transparent; }
   .days .today-mark {
-    border: 2px solid #fff;
-  }
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 3px rgba(255,255,255,0.3); }
+  50%  { box-shadow: 0 0 0 7px rgba(255,255,255,0.1); }
+  100% { box-shadow: 0 0 0 3px rgba(255,255,255,0.3); }
+}
   .legend {
     display: flex;
     gap: 16px;
